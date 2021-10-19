@@ -223,7 +223,7 @@ def knn_classify(training_data, testing_data, k):
       label = training_labels[knn]
       modes.append(label)
 
-    # Depending on classifer, predict based on average or mode (default=mode)
+    # Predict class based on mode
     mode = scipy.stats.mode(modes)[0]
     prediction = mode[0]
     actual = testing_labels[i]
