@@ -331,7 +331,7 @@ for k in range(k_min, k_max+1):
   print("Testing KNN for k=%d" % k)
   predictions = knn_classify(training_data, testing_data, k)
   accuracy = knn_accuracy(predictions)
-  print("Score for k=%d: %.2f percent accuracy\n" % (k, accuracy))
+  print("Score for k=%d: %.2f accuracy\n" % (k, accuracy))
   if accuracy > max_accuracy[1]:
     max_accuracy = [k, accuracy]
   total_accuracy += accuracy
@@ -340,5 +340,5 @@ iterations = k_max - k_min + 1
 average_accuracy = total_accuracy / iterations
 
 # Print highest accuracy and average accuracy
-print("Most accurate is k=%d with %.2f percent accuracy" % (max_accuracy[0], max_accuracy[1]))
+print("Most accurate is k=%d with %.2f accuracy" % (max_accuracy[0], max_accuracy[1]))
 print("Average accuracy: %.2f over %d iterations" % (average_accuracy, iterations))
